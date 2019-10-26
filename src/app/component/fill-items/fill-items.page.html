@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>SELECT {{category.category}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="whitebg selectitems">
+
+
+
+            <div *ngFor="let item of category.items; index as i" class="brdrbtm">
+              <ion-label>{{item.name | titlecase}}</ion-label>
+              <div class="ion-input-content">
+                <button (click)="minus(item, i)" class="btn btn-default red">-</button>
+                <input [(ngModel)]="item.qty" type="number" name="Quantity"/>
+                <button class="btn btn-default" (click)="plus(item, i)">+</button>
+              </div>
+             <!-- <ion-select [name]="item.name" [(ngModel)]="item.qty" placeholder="Select Qty">
+                <ion-select-option value=0>0</ion-select-option>
+                <ion-select-option value=1>1</ion-select-option>
+                <ion-select-option value=2>2</ion-select-option>
+                <ion-select-option value=3>3</ion-select-option>
+                <ion-select-option value=4>4</ion-select-option>
+                <ion-select-option value=5>5</ion-select-option>
+                <ion-select-option value=6>6</ion-select-option>
+                <ion-select-option value=7>7</ion-select-option>
+                <ion-select-option value=8>8</ion-select-option>
+                <ion-select-option value=9>9</ion-select-option>
+                <ion-select-option value=10>10</ion-select-option>
+              </ion-select>-->
+            </div>
+
+
+
+  <button (click)="dismiss()" expand="full" shape="round" color="light" class="btn btn-location">
+      Done
+  </button>
+</ion-content>

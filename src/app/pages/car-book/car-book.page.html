@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>car book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="whitebg">
+
+    <!--<ion-item>-->
+      <!--<ion-label>Location</ion-label>-->
+    <!--</ion-item>-->
+        <ion-grid class="carbook">
+            <ion-row>
+                <ion-col [size]="12">
+                    <div class="source">
+                        <ion-row>
+                            <ion-label>PICKUP FROM</ion-label>
+                            <ion-searchbar  (click)="getPickUpLocation('pickup')" #pickup="ngModel" name="pickup" [(ngModel)]="location.pickup" placeholder="Pickup location"></ion-searchbar>
+                        </ion-row>
+                    </div>
+                </ion-col>
+                <ion-col [size]="12">
+                    <div class="source">
+                        <ion-row>
+                            <ion-label>DROP LOCATION</ion-label>
+                            <ion-searchbar  (click)="getPickUpLocation('drop')" name="dropoff" #dropoff="ngModel" [(ngModel)]="location.dropoff" placeholder="Drop location"></ion-searchbar>
+                        </ion-row>
+                    </div>
+                </ion-col>
+                <ion-col [size]="12">
+                    <div class="source">
+
+                            <ion-label>Pickup Date</ion-label>
+
+                            <ion-card>
+                            <ion-datetime  name="datetime" [min]="minDate" [max]="maxDate" [(ngModel)]="datetime" placeholder="Pickup Date"></ion-datetime>
+                            </ion-card>
+                    </div>
+                </ion-col>
+                <ion-col [size]="12">
+                    <ion-button expand="block" color="dark"  [disabled]="(pickup == '' || dropoff == '')" (click)="next()">Book Now {{ price | currency: '₹' }} </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+
+</ion-content>

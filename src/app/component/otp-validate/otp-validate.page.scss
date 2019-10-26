@@ -1,0 +1,85 @@
+
+#partitioned {
+  padding-left: 15px;
+  letter-spacing: 42px;
+  border: 0;
+  background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 50px 1px;
+  background-repeat: repeat-x;
+  background-position-x: 35px;
+  width: 220px;
+  min-width: 220px;
+}
+
+#divInner{
+  left: 0;
+  position: sticky;
+}
+
+#divOuter{
+  width: 190px;
+  overflow: hidden;
+  text-align: center;
+  //margin: 16%;
+  margin: 0 auto;
+}
+input{
+  --background: #000000;
+}
+.next{
+  display: inline-flex;
+}
+.next .content{
+  width: 60%;
+  font-family: fantasy;
+  color: #444;
+}
+.next-btn{
+  width: 30%;
+}
+.next-btn a{
+  padding: 20px;
+  background: #000;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.form-login{
+  margin-top: 35%;
+}
+.otp-img ion-icon{
+
+  font-size: 55px;
+   color:#f4c616;
+}
+.otp-img {
+  width: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+.otp-img ion-icon.chatbox{
+  font-size: 30px;
+  color:#000;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  z-index: 99;
+}
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width:100%; /*whatever width you want*/
+}

@@ -1,0 +1,55 @@
+ion-label{
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 13px;
+}
+#map_canvas {
+  width: 90%;
+  height: 80%;
+  border: 1px solid red;
+}
+
+
+#address {
+  padding: 10px;
+  height: 61px;
+  background: #f5eeee;
+  font-size: 10px;
+  color: #4e3a3a;
+  font-weight: bold;
+}
+ion-header{
+  background: #2f2f54;
+}
+
+#map {
+  width: 100%;
+  /* background: #b98888; */
+  height: 74vh;
+}
+
+.map-wrapper {
+  position: relative;
+
+  #map_center {
+    position: absolute;
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -41px;
+  }
+}
+
+.fixed-btn{
+  bottom: 0 !important;
+  width: 100%;
+   position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+.map-search ion-label{
+    font-size: 13px !important;
+}

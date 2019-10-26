@@ -1,0 +1,7 @@
+{
+  "name": "local-shifting",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,42 @@
+<ion-content>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+            <ion-grid>
+                <ion-row>
+                    <ion-col [size]="12">
+                        <div class="logo-login" text-center="">
+                            <img src="../../../assets/icon/logo.jpeg" width="50"/>
+                        </div>
+                    </ion-col>
+                    <ion-col [size]="12">
+                        <div >
+                            <ion-item class="login-icon">
+                                <ion-icon name="phone-portrait"></ion-icon>
+                                <span class="ccode">(+91)</span>
+                                <ion-input type="tel" name="phone" #phone="ngModel" maxlength="10" minlength="10" [(ngModel)]="user.phone" placeholder="Enter mobile number" text-center></ion-input>
+                            </ion-item>
+                        </div>
+                    </ion-col>
+                    <ion-col [size]="12">
+                        <div >
+                            <!--<div class="content" text-center>-->
+                            <!--To continue you may receive an SMS for verification-->
+                            <!--</div>-->
+                            <div>
+
+                                <ion-button color="dark" (click)="sentOtp()" expand="block">Proceed <ion-icon name="arrow-forward"></ion-icon></ion-button>
+                                <!--<ion-icon ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>-->
+
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+
+            </div>
+        </div>
+    </div>
+</ion-content>

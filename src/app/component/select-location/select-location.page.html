@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Select Location</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="whitebg">
+      <ion-grid class="map-search">
+        <ion-row>
+          <ion-col [size]="12">
+            <ion-label>Search Location</ion-label>
+            <ion-searchbar name="address" placeholder="Search location" [(ngModel)]="address"></ion-searchbar>
+            <ion-button (click)="getPoints()" expand="full" >Search</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+  <div class="map-wrapper">
+    <div id="map_center">
+      <img src="assets/marker.png" />
+    </div>
+    <div #map id="map"></div>
+  </div>
+  <div id="address">
+    <span>{{address}}</span>
+  </div>
+  <ion-button (click)="confirmLocation()" expand="block"  color="dark" class="fixed-btn">
+    Confirm Location
+  </ion-button>
+</ion-content>

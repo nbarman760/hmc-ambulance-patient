@@ -1,0 +1,86 @@
+.item-category-row .icon-cat {
+  display: block !important;
+
+}
+
+.item-category-row ion-button{
+  display: block;
+  height: 100px;
+  white-space: normal;
+}
+.button-inner{
+  display: block !important;
+}
+ion-content{
+  --background: #eaeaea;
+}
+ion-button span {
+  --flex: none;
+  --display: block !important;
+}
+ion-content ion-button {
+  --flex-direction: column !important;
+  --display: block !important;
+}
+.category{
+  font-size: 14px;
+}
+
+
+ion-content .button-inner {
+  --display: block !important;
+  --flex-direction: column !important;
+}
+.item-category-row{
+  background: #fff;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.item-category-row p {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.cat-content{
+  display: block;
+  width: 100%;
+}
+.number-item{
+  position: absolute;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 20px;
+  background: #f2c811;
+  justify-content: center;
+  align-items: center;
+  top:20px;
+  font-size: 14px;
+}
+.furniture svg{
+
+  width: 24px;
+
+}
+.fixed-btn{
+  bottom: -4px !important;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  z-index: 999;
+  width: 100%;
+}
+
+ion-row{
+  margin-bottom: 11%;
+}
+
+.selected .item-category-row{
+  background: #445678;
+  color: #fff;
+  font-weight: bolder;
+}

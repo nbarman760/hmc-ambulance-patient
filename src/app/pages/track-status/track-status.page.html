@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Track Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="whitebg">
+
+  <ion-grid>
+    <div class="trackid">
+      <ion-row>
+      <ion-col [size]="6">
+        Estimated Time
+        <p>20 Minutes</p>
+      </ion-col>
+      <ion-col [size]="6">
+        order Number
+        <p>{{order.booking_id}}</p>
+      </ion-col>
+      </ion-row>
+    </div>
+    <ion-row>
+
+      <ion-col [size]="12">
+            <div class="track-content">
+
+                <div class="step step-active">
+                     Order Placed
+                   <p>We have receive your Order</p>
+                </div>
+              <div class="step step-active">
+                Order Confirmed
+                <p>We have receive your Order</p>
+              </div>
+              <div class="step">
+                Order Processed
+                <p>We have receive your Order</p>
+              </div>
+              <div class="step steplast">
+                Ready To Pick Up
+                <p>We have receive your Order</p>
+              </div>
+
+            </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>booking-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="msg !='' ">
+    <ion-card-content>
+      {{msg}}
+    </ion-card-content>
+  </ion-card>
+  <ion-grid *ngIf="orders.length > 0">
+    <ion-card *ngFor="let order of orders">
+      <ion-row>
+        <ion-col size="2" class="status">
+          <div class="salon-img">
+             <h3>{{order.shift_status | uppercase}}</h3>
+          </div>
+        </ion-col>
+        <ion-col size="10" padding>
+          <ion-card-header>
+            <ion-card-title>{{order.booking_id}}</ion-card-title>
+            <ion-card-subtitle><strong>Pickup date:</strong> {{order.shift_time | date: 'dd MMM, yyyy'}}</ion-card-subtitle>
+            <ion-card-subtitle><strong>Address: </strong> {{order.destination_address | titlecase}}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button expand="full"  color="dark" (click)="trackStatus(order)" > Track Order<ion-icon name="arrow-forward"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-grid>
+  <div *ngIf="orders.length==0" class="wrapper">
+    <div *ngFor="let fake of fakeList" class='wrapper-cell'>
+      <div class='image'></div>
+      <div class='text'>
+        <div class='text-line'></div>
+        <div class='text-line'></div>
+        <div class='text-line'></div>
+        <div class='text-line'></div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

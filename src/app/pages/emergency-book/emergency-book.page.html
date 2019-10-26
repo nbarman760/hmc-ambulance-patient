@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>What happend?</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+     <ion-col [size]="6" *ngFor="let diease of dieases; index as i" [ngClass]="diease.selected? 'selected': ''" (click)="makeSelection(diease, i)">
+       <div class="item-category-row" >
+         <div class="cat-content">
+             <p>{{diease.name | titlecase}}</p>
+         </div>
+       </div>
+     </ion-col>
+  </ion-row>
+
+
+  <ion-button (click)="bookAmbulance()" expand="block"  color="dark" class="fixed-btn">
+    Book Ambulance
+  </ion-button>
+</ion-content>
