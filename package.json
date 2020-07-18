@@ -35,7 +35,7 @@
     "cordova-plugin-nativegeocoder": "^3.2.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "core-js": "^2.5.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "underscore": "^1.9.1",
